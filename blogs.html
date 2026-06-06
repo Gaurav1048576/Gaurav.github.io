@@ -1,107 +1,198 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blogs | Gaurav Singh</title>
+<title>Blog | Gaurav Singh</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="blog.css">
 </head>
-
 <body>
 
-<nav class="navbar">
-<div class="logo">Gaurav Singh</div>
-
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="blogs.html">Blogs</a></li>
-</ul>
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="navbar-logo">GS<span>.</span></a>
+  <ul class="navbar-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="blogs.html" class="nav-active">Blog</a></li>
+  </ul>
+  <a href="index.html#contact" class="navbar-cta">Get in Touch</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<header class="blog-header">
-
-<h1>Thoughts on Engineering, Physics, Mathematics and Life</h1>
-
-<p>
-A collection of essays about science,
-engineering, philosophy, music and the universe.
-</p>
-
+<!-- ===== BLOG HERO ===== -->
+<header class="blog-hero">
+  <div class="blog-hero-bg">
+    <div class="blog-orb blog-orb-1"></div>
+    <div class="blog-orb blog-orb-2"></div>
+    <div class="hero-grid-lines"></div>
+  </div>
+  <div class="blog-hero-content">
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      Essays & Explorations
+    </div>
+    <h1 class="blog-hero-title">Thoughts on Engineering,<br>Physics, Mathematics & Life</h1>
+    <p class="blog-hero-sub">A collection of essays about science, engineering, philosophy, music and the universe. Written for curious minds.</p>
+    <div class="blog-hero-meta">
+      <span class="blog-hero-count">4 Articles</span>
+      <span class="blog-hero-sep">·</span>
+      <span class="blog-hero-tag">Engineering</span>
+      <span class="blog-hero-tag">Philosophy</span>
+      <span class="blog-hero-tag">Mathematics</span>
+      <span class="blog-hero-tag">Music</span>
+    </div>
+  </div>
 </header>
 
-<section class="container">
+<!-- ===== FEATURED ARTICLE ===== -->
+<main class="blog-main">
+  <div class="blog-container">
 
-<div class="blogcard">
+    <div class="blog-section-label">Featured</div>
 
-<img src="images/equations.jpg" class="blogimg">
+    <a href="blog2.html" class="featured-card fade-up">
+      <div class="featured-card-img">
+        <img src="images/nightsky.jpg" alt="Night Sky"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="blog-img-placeholder" style="display:none;">🌌</div>
+        <div class="featured-card-overlay"></div>
+        <div class="featured-label">Featured</div>
+      </div>
+      <div class="featured-card-body">
+        <div class="card-meta">
+          <span class="card-cat">Philosophy · Cosmology</span>
+          <span class="card-dot">·</span>
+          <span class="card-time">12 min read</span>
+        </div>
+        <h2 class="featured-card-title">Why the Night Sky Makes Us Philosophical</h2>
+        <p class="featured-card-desc">Looking at stars, mortality, meaning and our place in the universe. When we step outside on a clear night and look upward, the stars do not speak — and somehow that is enough to make us wonder.</p>
+        <div class="card-footer">
+          <div class="card-author">
+            <div class="author-avatar">GS</div>
+            <span>Gaurav Singh</span>
+          </div>
+          <span class="read-more-link">Read Article →</span>
+        </div>
+      </div>
+    </a>
 
-<h2>The Equations That Changed Humanity</h2>
+    <!-- ===== GRID ARTICLES ===== -->
+    <div class="blog-section-label" style="margin-top: 64px;">All Articles</div>
 
-<p>
-From Pythagoras to Einstein, a journey through
-the mathematical ideas that transformed civilization.
-</p>
+    <div class="blog-grid">
 
-<a href="blog1.html" class="btn">
-Read Article
-</a>
+      <a href="blog1.html" class="blog-card fade-up">
+        <div class="blog-card-img">
+          <img src="images/equations.jpg" alt="Equations"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="blog-img-placeholder" style="display:none;">∑</div>
+        </div>
+        <div class="blog-card-body">
+          <div class="card-meta">
+            <span class="card-cat">Mathematics · History</span>
+            <span class="card-dot">·</span>
+            <span class="card-time">15 min read</span>
+          </div>
+          <h3 class="blog-card-title">The Equations That Changed Humanity</h3>
+          <p class="blog-card-desc">From Pythagoras to Einstein, a journey through the mathematical ideas that transformed civilization — a few symbols on paper that gave us engineering, electricity, and modern physics.</p>
+          <div class="card-footer">
+            <span class="card-tags">
+              <span class="ctag">FEM</span>
+              <span class="ctag">Physics</span>
+              <span class="ctag">History</span>
+            </span>
+            <span class="read-more-link">Read →</span>
+          </div>
+        </div>
+      </a>
 
-</div>
+      <a href="blog3.html" class="blog-card fade-up">
+        <div class="blog-card-img">
+          <img src="images/simulation.jpg" alt="Simulation"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="blog-img-placeholder" style="display:none;">⚙️</div>
+        </div>
+        <div class="blog-card-body">
+          <div class="card-meta">
+            <span class="card-cat">Computation · Engineering</span>
+            <span class="card-dot">·</span>
+            <span class="card-time">10 min read</span>
+          </div>
+          <h3 class="blog-card-title">How Computers Predict Reality</h3>
+          <p class="blog-card-desc">From bridges and aircraft to weather systems and black holes — how numerical simulation became one of humanity's most powerful tools for understanding the world.</p>
+          <div class="card-footer">
+            <span class="card-tags">
+              <span class="ctag">CFD</span>
+              <span class="ctag">FEM</span>
+              <span class="ctag">Simulation</span>
+            </span>
+            <span class="read-more-link">Read →</span>
+          </div>
+        </div>
+      </a>
 
-<div class="blogcard">
+      <a href="blog4.html" class="blog-card fade-up">
+        <div class="blog-card-img">
+          <img src="images/music.jpg" alt="Music"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="blog-img-placeholder" style="display:none;">🎵</div>
+        </div>
+        <div class="blog-card-body">
+          <div class="card-meta">
+            <span class="card-cat">Music · Mathematics</span>
+            <span class="card-dot">·</span>
+            <span class="card-time">8 min read</span>
+          </div>
+          <h3 class="blog-card-title">Why Music Feels Like Mathematics You Can Hear</h3>
+          <p class="blog-card-desc">The connection between frequencies, patterns and emotion. Why harmony feels beautiful, why rhythm feels inevitable, and why mathematics might be the hidden language of art.</p>
+          <div class="card-footer">
+            <span class="card-tags">
+              <span class="ctag">Music</span>
+              <span class="ctag">Waves</span>
+              <span class="ctag">Fourier</span>
+            </span>
+            <span class="read-more-link">Read →</span>
+          </div>
+        </div>
+      </a>
 
-<img src="images/nightsky.jpg" class="blogimg">
+    </div>
+  </div>
+</main>
 
-<h2>Why the Night Sky Makes Us Philosophical</h2>
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">GS<span>.</span></div>
+  <span class="footer-copy">© 2026 Gaurav Singh · Structural &amp; Computational Engineer</span>
+  <div class="footer-links">
+    <a href="https://github.com/Gaurav1048576" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/gaurav-singh-636ab4193/" target="_blank">LinkedIn</a>
+    <a href="index.html">Home</a>
+  </div>
+</footer>
 
-<p>
-Looking at stars, mortality,
-meaning and our place in the universe.
-</p>
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-<a href="blog2.html" class="btn">
-Read Article
-</a>
-
-</div>
-
-<div class="blogcard">
-
-<img src="images/simulation.jpg" class="blogimg">
-
-<h2>How Computers Predict Reality</h2>
-
-<p>
-From bridges and aircraft to weather
-systems and black holes.
-</p>
-
-<a href="blog3.html" class="btn">
-Read Article
-</a>
-
-</div>
-
-<div class="blogcard">
-
-<img src="images/music.jpg" class="blogimg">
-
-<h2>Why Music Feels Like Mathematics You Can Hear</h2>
-
-<p>
-The connection between frequencies,
-patterns and emotion.
-</p>
-
-<a href="blog4.html" class="btn">
-Read Article
-</a>
-
-</div>
-
-</section>
-
+const fadeEls = document.querySelectorAll('.fade-up');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+fadeEls.forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
